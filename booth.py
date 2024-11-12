@@ -17,6 +17,16 @@ def get_brand_name(industry):
             return ind["brand"]
     return "Brand not found"
 
+# Display logo above the menu
+st.markdown(
+    """
+    <div class="top-right-logo-container">
+        <img src="https://bestofworlds.se/img/BoWlogo.png" class="top-right-logo">
+    </div>
+    """, 
+    unsafe_allow_html=True
+)
+
 # Function to get the mission statement based on industry, sustainability, and archetype
 def get_mission_statement(industry, sustainability, archetype):
     for ind in mission_statements_data["industries"]:
